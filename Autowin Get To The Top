@@ -1,0 +1,16 @@
+local TS = game:GetService("TweenService")
+    farm = true
+    
+    while farm == true do
+        local Tween = TS:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(2), {CFrame = CFrame.new(14.50354, 1135.09448, -540.854248, 0, -1, -0, -1, 0, -0, 0, 0, -1)})
+            Tween:Play()
+                wait(0.1)
+                    game:GetService("RunService").Stepped:Connect(function()
+                        game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+                        wait(2)
+                    game:GetService("RunService").Stepped:Connect(function()
+                game.Players.LocalPlayer.Character.Humanoid:ChangeState(0)
+            wait(5)
+        end)
+    end)
+end
